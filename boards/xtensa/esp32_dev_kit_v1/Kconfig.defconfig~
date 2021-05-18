@@ -1,0 +1,14 @@
+# ESP32 board configuration
+
+# Copyright (c) 2017 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_ESP32_DEV_KIT_V1
+config BOARD
+	default "esp32_dev_kit_v1"
+	depends on BOARD_ESP32
+
+endif
+
+config ENTROPY_ESP32_RNG
+	default y if ENTROPY_GENERATOR
